@@ -38,7 +38,7 @@ classifier.add(Dense(activation="relu", units=6, kernel_initializer="uniform"))
 
 classifier.add(Dense(units=1)) #since this is a regression model, we are not giving any activation functions, for classification models, "segmoid" function is used most commonly
 
-classifier.compile(optimizer = "adam", loss = "mean_squared_error") #since this is a regression model, we are using "mean_squared_error" as a way to calculate the loss, for classification we mostly use 
+classifier.compile(optimizer = "adam", loss = "mean_squared_error") #since this is a regression model, we are using "mean_squared_error" as a way to calculate the loss, for classification we mostly use "binary_crossentropy"
 
 classifier.fit(X_train,y_train,batch_size = 32,epochs = 100)
 
